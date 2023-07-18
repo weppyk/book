@@ -2,7 +2,6 @@ import express, { Request, Response } from 'express';
 import { Book } from './components/Book';
 
 const app = express();
-const port = 3006;
 
 // Mock database
 const books: Book[] = [
@@ -11,10 +10,9 @@ const books: Book[] = [
   { id: 3, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald' },
 ];
 
+// return a list of books
 app.get('/books', (req: Request, res: Response) => {
   res.json(books);
 });
 
-app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
-});
+export default app;
