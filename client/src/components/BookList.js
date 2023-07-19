@@ -14,6 +14,6 @@ const BookList = () => {
             setBooks(data);
         });
     }, []);
-    return ((0, jsx_runtime_1.jsxs)("div", { children: [(0, jsx_runtime_1.jsx)("h1", { children: "Book List" }), books.map(book => ((0, jsx_runtime_1.jsxs)("div", { children: [(0, jsx_runtime_1.jsx)("h2", { children: book.title }), (0, jsx_runtime_1.jsx)("h3", { children: book.author })] }, book.id)))] }));
+    return ((0, jsx_runtime_1.jsxs)("div", { className: "book-list", children: [(0, jsx_runtime_1.jsx)("h1", { children: "Book List" }), books.map(book => ((0, jsx_runtime_1.jsxs)("div", { className: "book-item", children: [(0, jsx_runtime_1.jsx)("h2", { children: book.title }), (0, jsx_runtime_1.jsx)("h3", { children: book.author })] }, book.id)))] }));
 };
 exports.default = BookList;
