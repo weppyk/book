@@ -10,9 +10,14 @@ const BookList: React.FC = () => {
   const [books, setBooks] = useState<Book[]>([]);
 
   useEffect(() => {
-    fetch('http://localhost:3005/books')
+    fetch('http://localhost:3005/books', { 
+      method: 'GET',
+      mode: 'cors',
+    })
       .then(response => response.json())
-      .then(data => setBooks(data));
+      .then(data => {
+        setBooks(data)
+    });
   }, []);
 
   return (
